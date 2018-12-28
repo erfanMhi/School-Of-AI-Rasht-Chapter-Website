@@ -102,23 +102,30 @@ footer {
 .event-cover {
     height: 300px;
     width: 100%;
-    z-index: -1;
-    /* position: relative; */
+    margin-bottom: 100px
 }
 
 .profile-pic {
     width: 80px;
     height: 80px;
-    margin: -40px 0px 0 80px;
-    /* position: relative; */
 }
 .event-short-desc-container {
     padding: 10px;
-    margin: -40px 80px 0 0px;
     z-index: 1;
-    /* position: relative; */
+    background: rgba(255, 255, 255, 0.788)
 }
 
 .event-header {
-    /* position: relative; */
+    position: relative;
+}
+
+.event-header .profile-pic {
+    position: absolute;
+    top: 257px;
+    left: 10px;
+}
+.event-header .event-short-desc-container {
+    position: absolute;
+    top: 205px;
+    right: 10px;
 }
