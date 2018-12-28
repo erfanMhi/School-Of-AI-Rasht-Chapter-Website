@@ -1,11 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 body {
     /* background: url("../resources/imgs/soa_logo.png"); */
     /* background: url("http://www.deleteagency.com/assets/img/pattern.png"); */
     margin: 0px 0px 0px 0px;
-    color: white;
     /* background-image: url("../resources/imgs/ai-logo_2.png"); */
     background-repeat: repeat;
     background-size: 80px;
+    font-family: "Roboto", sans-serif;
+
     /* background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%); */
 }
 
@@ -16,6 +18,8 @@ header {
     background-size: cover;
     background-position: center;
     margin-top:0px;
+    color: white;
+
 }
 
 section {
@@ -28,18 +32,28 @@ a {
     color: white;
 }
 
+.black-color {
+    color: black;
+}
+
+a:hover {
+    color: #1AAB8A;
+}
+
 .nav-container {
     color: white;
     list-style-type: none;
     height: 60px;
     margin: 0px;
     font-size: 1.5em;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 10px 0px 10px;
     
 }
 
 .brand-item {
     height: 40px;
+    color: #1AAB8A;
 }
 
 main {
@@ -50,30 +64,6 @@ main {
     padding-left: 10px;
     color: black;
     
-}
-
-.effect7
-{
-    position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-
-.effect7:before, .effect7:after
-{
-    content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
-    top:0;
-    bottom:0;
-    left:10px;
-    right:10px;
-    -moz-border-radius:100px / 10px;
-    border-radius:100px / 10px;
 }
 
 
@@ -87,4 +77,48 @@ footer {
     height: 50px;
     padding: 10px;
     background: white;
+}
+
+#login-signup-container {
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    width: 360px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.not-show {
+    display: None;
+}
+
+.event-cover {
+    height: 300px;
+    width: 100%;
+    z-index: -1;
+    /* position: relative; */
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    margin: -40px 0px 0 80px;
+    /* position: relative; */
+}
+.event-short-desc-container {
+    padding: 10px;
+    margin: -40px 80px 0 0px;
+    z-index: 1;
+    /* position: relative; */
+}
+
+.event-header {
+    /* position: relative; */
 }

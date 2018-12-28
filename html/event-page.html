@@ -10,101 +10,97 @@
   <meta name="author" content="Erfan Miahi">
   <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;">
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/flex-containers.css">
-  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/flex-containers.css">
+  <link rel="stylesheet" href="../css/elements.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
   <!--<div class="flex-container">-->
-  <header class="flex-container flex-column">
-  <nav class="nav-container flex-container flex-center">
+    <nav class="nav-container flex-container flex-center main-effect">
 
-      <div class="flex-item-1">
-        <a id="brand-pic-container" href="">
-          <img class="brand-item" src="./resources/imgs/soa_logo.svg" onmouseover="hover(this);" onmouseout="unhover(this);">
-        </a>
-      </div>
 
-      <div class="flex-container flex-item-4 flex-center">
-        <a class="flex-padding-1" href="#">
-          Events
-        </a>
-        <a class="flex-padding-1" href="#">
-          Lecturers
-        </a>
-        <a class="flex-padding-1" href="#">
-          About us
-        </a>
-      </div>
+        <div class="flex-item-1">
+            <a id="brand-pic-container-other" href="">
+            <img class="brand-item black-color" src="../resources/imgs/soa_logo_3.svg" onmouseover="hover(this, true);" onmouseout="unhover(this, true);">
+            </a>
+        </div>
 
-      <div class="flex-container flex-item-1">
-      <a id="register-button" class="flex-item-1" onclick="addRegisterPage()" href="#">
-        Sign up
-      </a>
-      <a id="login-button" class="flex-item-1" onclick="addLoginPage()" href="#">
-        Login
-      </a>
-      </div>
+        <div class="flex-container flex-item-4 flex-center">
+            <a class="flex-padding-1 black-color" href="#">
+            Events
+            </a>
+            <a class="flex-padding-1 black-color" href="#">
+            Lecturers
+            </a>
+            <a class="flex-padding-1 black-color" href="#">
+            About us
+            </a>
+        </div>
 
-  </nav>
-  <div class='flex-container flex-center flex-grow flex-column'>
-    <h1> School of AI - Rasht Chapter</h1>
-    <button id="register-bt-2" class="sign-button" onclick="addRegisterPage()">Sign up</button>
-  </div>
-  </header>
+        <div class="flex-container flex-item-1">
+        <a id="register-button" class="flex-item-1 black-color" href="#" onclick="addRegisterPage()">
+            Sign up
+        </a>
+        <a id="login-button" class="flex-item-1 black-color" href="#" onclick="addLoginPage()">
+            Login
+        </a>
+        </div>
+
+    </nav>
+
+    <div class='event-header'>
+
+    <div class='event-cover'>
+        <img src="../resources/imgs/event-cover-1.png" width="100%" height="100%">
+    </div>
+    <div class='flex-container flex-space'>
+    <div class='profile-pic'> <img src="../resources/imgs/user.svg"> </div>
+
+    <div class='event-short-desc-container main-effect'> 
+    <h3> School of AI first Meetup </h3>
+    <p><b>Organizer:</b> Erfan Miahi</p>
+    <p><b>Place:</b> University of Guilan, Farhang House</p>
+    <p><b>Date:</b> 22 December, 4:00 PM </p>
+    </div>
+    </div>
+        </div>
   
   <main class="main-effect flex-container flex-column">
+
   <section class="flex-container flex-column">
-    <h2>Events</h2>
+    <h2>Description</h2>
     <div class="events-container flex-container flex-padding-1">
-      <div class="main-effect event-card flex-item-1">
-        <img src="./resources/imgs/ai.png">
-        <div class="flex-container flex-column flex-grow">
-          <b>School of AI First Meetup</b>
-          <button class="event-card-button">Sign up</button>
-        </div>
-      </div>
-      <div class="main-effect event-card flex-item-1">
-        <img src="./resources/imgs/ai.png">
-        <div class="flex-container flex-column flex-grow">
-          <b>School of AI First Meetup</b>
-          <button class="event-card-button">Sign up</button>
-        </div>
-      </div>
-      <div class="main-effect event-card flex-item-1">
-        <img src="./resources/imgs/ai.png">
-        <div class="flex-container flex-column flex-grow">
-          <b>School of AI First Meetup</b>
-          <button class="event-card-button">Sign up</button>
-        </div>
-      </div>
+        The School of AI mission is to offer a world-class AI education to anyone on Earth for free.
+         Our doors are open to all those who wish to learn. We are a learning community that spans almost
+          every country dedicated to teaching our students how to make a positive impact in the world using AI
+           technology, whether that's through employment or entrepreneurship. 
     </div>
     <div class='flex-container flex-center'>
-    <a class= 'show-more-button'> Show More... </a>
     </div>
   </section>
 
-  <section class="flex-container flex-column">
+
+<section class="flex-container flex-column">
     <h2>Lecturers</h2>
     <div class="events-container flex-container flex-padding-1">
       <div class="main-effect event-card flex-item-1">
-        <img src="./resources/imgs/ai.png">
+        <img src="../resources/imgs/ai.png">
         <div class="flex-container flex-column flex-grow">
           <b>School of AI First Meetup</b>
           <button class="event-card-button">Sign up</button>
         </div>
       </div>
       <div class="main-effect event-card flex-item-1">
-        <img src="./resources/imgs/ai.png">
+        <img src="../resources/imgs/ai.png">
         <div class="flex-container flex-column flex-grow">
           <b>School of AI First Meetup</b>
           <button class="event-card-button">Sign up</button>
         </div>
       </div>
       <div class="main-effect event-card flex-item-1">
-        <img src="./resources/imgs/ai.png">
+        <img src="../resources/imgs/ai.png">
         <div class="flex-container flex-column flex-grow">
           <b>School of AI First Meetup</b>
           <button class="event-card-button">Sign up</button>
@@ -112,28 +108,9 @@
       </div>
     </div>
     <div class='flex-container flex-center'>
-    <a class= 'show-more-button'> Show More... </a>
     </div>
   </section>
 
-  <section class="flex-container flex-column">
-    <h2>Deans</h2>
-    <div class="events-container flex-container flex-padding-1 flex-center">
-      <div class="">
-      </div>
-      <div class="main-effect event-card flex-padding-1">
-        <div class="flex-container flex-center">
-        <img src="./resources/imgs/profile.png" class='deans-photo'>
-        </div>
-        <div class="flex-container flex-column flex-center">
-          <b>Erfan Miahi</b>
-          <p> Az Khobaye AI </p>
-        </div>
-      </div>
-      <div class="">
-      </div>
-    </div>
-  </section>
 
   </main>
 
@@ -168,8 +145,8 @@
     <div>
   </div>
 
-  <script src="./js/utils/css_manip.js"></script>
-  <script src="./js/scripts.js"></script>
+  <script src="../js/utils/css_manip.js"></script>
+  <script src="../js/scripts.js"></script>
 
 
   <!--  <div class="flex-container">

@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
   .sign-button {
       background: #1AAB8A;
       color: #fff;
@@ -68,16 +70,25 @@
       margin: 4px 2px;
       cursor: pointer;
       background: #1AAB8A;
-
   }
 
-  .show-button {
-    background-color: #4CAF50;
+  .event-card-button:hover {
+    color: #1AAB8A;
+    background: white;
+  }
+
+  .show-more-button {
     background: #1AAB8A;
     width: max-content;
-    padding: 5px;
+    padding: 10px;
+    box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.16);
   }
 
+  .show-more-button:hover {
+    color: #1AAB8A;
+    background: white;
+    cursor: pointer;
+  }
   /* Style all font awesome icons */
 .fa {
     padding: 20px;
@@ -98,14 +109,75 @@
   
   /* Facebook */
   .fa-facebook {
-    background: #3B5998;
-    color: white;
-    border-radius: 50%;
+    color: #3B5998;
   }
   
   /* Twitter */
   .fa-twitter {
-    background: #55ACEE;
-    color: white;
+    color: #55ACEE;
+  }
+
+  .fa-facebook {
+      
+  }
+
+  .fa {
+    color: #55ACEE;
     border-radius: 50%;
+  }
+  .deans-photo {
+    height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+  }
+
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #1AAB8A;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+
+  .form button:hover,.form button:active,.form button:focus {
+    background: #1AAB8A;
+  }
+
+
+  .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+  }
+
+  .form .message a {
+    color: #1AAB8A;
+    text-decoration: none;
+  }
+
+  #login-register-close-bt:hover {
+    cursor: pointer;
+    color: #1AAB8A;
+  }
+
+  #login-register-close-bt {
+    color: white;
   }

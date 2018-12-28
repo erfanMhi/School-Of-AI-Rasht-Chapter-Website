@@ -22,8 +22,16 @@
     padding: 1em;
 }
 
+.flex-padding-2 {
+    padding: 2em;
+}
+
 .flex-column {
     flex-direction: column; 
+}
+
+.flex-space {
+    justify-content: space-between;
 }
 
 
@@ -33,6 +41,10 @@
 
 .flex-grow {
     flex-grow: 1;  
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .flex-center {
