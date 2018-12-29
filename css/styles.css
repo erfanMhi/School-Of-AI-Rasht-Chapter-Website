@@ -69,8 +69,8 @@ main {
 
 .main-effect {
     -webkit-box-shadow: 1px 2px 75px 10px rgba(0,0,0,0.1);
--moz-box-shadow: 1px 2px 75px 10px rgba(0,0,0,0.1);
-box-shadow: 1px 2px 75px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 75px 10px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 75px 10px rgba(0,0,0,0.1);
 }
 
 footer {
@@ -106,13 +106,20 @@ footer {
 }
 
 .profile-pic {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
+
+.profile-pic-container:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.2);
+
+}
+
 .event-short-desc-container {
     padding: 10px;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.788)
+    background: rgba(255, 255, 255, 1)
 }
 
 .event-header {
@@ -121,11 +128,98 @@ footer {
 
 .event-header .profile-pic {
     position: absolute;
-    top: 257px;
-    left: 10px;
+    top: 250px;
+    left: 80px;
 }
 .event-header .event-short-desc-container {
     position: absolute;
     top: 205px;
-    right: 10px;
+    right: 80px;
 }
+
+
+
+.pro-short-info {
+    box-shadow: 0px 2px 10px 0px rgba(100,100,100,0.5);
+}
+.pro-outline {
+
+
+}
+.pro-outline a {
+    margin: 0px;
+    padding: 5px 10px;
+}
+
+#selected {
+    background: #1AAB8A;
+    color: white;
+}
+
+#selected:hover {
+    background: #1AAB8A;
+    color: white;
+    cursor: default;
+}
+
+.pro-outline a:hover {
+    background: rgb(193, 198, 197);
+    color: white;
+    cursor: pointer;
+}
+
+.pro-outline b {
+    margin: 5px 0px 5px 0px;
+}
+
+.nav-shadow {
+    top:0;
+    position:fixed;
+    width: 100%;
+    box-shadow: 0px 4px 10px 0px rgba(100,100,100,0.5);
+    z-index: 3;
+    background-color: white;
+}
+
+footer {
+    box-shadow: 0px -4px 10px 0px rgba(100,100,100,0.5);
+}
+
+
+.profile-main {
+    position: relative;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    margin-bottom: 60px;;
+}
+
+.pro-info {
+    width: 100%;
+    margin: 20px;
+    z-index: 1;
+
+}
+
+
+.profile-aside {
+    /* position: fixed; */
+    /* top:60px; */
+    width:250px;
+    z-index: 1;
+    /* position: relative; */
+}
+
+
+
+.profile-footer {
+    bottom: 0px;
+    position: relative;
+    width:100%;
+    background: white;
+    z-index: 4;
+}
+
+
+  

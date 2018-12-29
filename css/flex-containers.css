@@ -34,6 +34,9 @@
     justify-content: space-between;
 }
 
+.flex-margin-left {
+    margin-left: 10px;
+}
 
 .flex-end-item {
 
@@ -50,6 +53,10 @@
 .flex-center {
     align-items: center;
     justify-content: center;
+}
+
+.flex-center-align {
+    align-items: center;
 }
 
 .flex-no-wrap {
