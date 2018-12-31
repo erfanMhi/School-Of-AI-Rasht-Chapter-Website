@@ -90,7 +90,7 @@
     cursor: pointer;
   }
   /* Style all font awesome icons */
-.fa {
+.fa-new {
     padding: 20px;
     font-size: 30px;
     width: 30px;
@@ -100,7 +100,7 @@
   }
   
   /* Add a hover effect if you want */
-  .fa:hover {
+  .fa-new:hover {
     opacity: 0.7;
     
   }
@@ -225,3 +225,92 @@
   .custom-file-input:hover {
     cursor: pointer;
   }
+
+
+
+.request-table{
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+    background: white;
+}
+.request-table th, td {
+    padding: 0.5rem;
+    text-align: left;
+    /* border: 1px solid #ccc; */
+  }
+.request-table tbody tr:hover {
+    /* background: #1AAB8A;
+    color: white; */
+  -webkit-box-shadow: -1px 7px 19px 0px rgba(171,169,171,1);
+  -moz-box-shadow: -1px 7px 19px 0px rgba(171,169,171,1);
+  box-shadow: -1px 7px 19px 0px rgba(171,169,171,1);
+}
+
+.fa-trash, .fa-handshake-o, .fa-user-plus:hover {
+  cursor: pointer;
+}
+
+.cover-pic-chooser {
+  /* width: 400px; */
+  /* height: 250px; */
+  /* margin: auto; */
+  position: relative;
+}
+
+.cover-pic-input {
+  position: absolute;
+  opacity: 0;
+  width: 450px;
+  height: 250px;
+  z-index: 10;
+}
+
+.cover-pic-input:hover {
+  cursor: pointer;
+}
+
+.cover-pic-chosen {
+  height: 250px;
+  width: 450px;
+  opacity: 1;
+}
+
+.choose-cover-bt {
+  position: absolute;
+  bottom: 80px;
+  padding: 10px;
+  font-size: 1.5em;
+  background: #1AAB8A;
+  color: white;
+  border-radius: 10px;
+}
+
+
+.logo-pic-input {
+  position: absolute;
+  opacity: 0;
+  height: 150px;
+  width: 150px;
+  z-index: 10;
+}
+
+.logo-pic-input:hover {
+  cursor: pointer;
+}
+
+.logo-pic-chosen {
+  height: 150px;
+  width: 150px;
+  opacity: 1;
+}
+
+.choose-logo-bt {
+  position: absolute;
+  bottom: 10px;
+  padding: 5px;
+  font-size: 1em;
+  background: #1AAB8A;
+  color: white;
+  border-radius: 10px;
+}

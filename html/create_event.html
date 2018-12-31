@@ -51,8 +51,8 @@
                 </div>
                 <div class='pro-outline flex-padding-1 flex-container flex-column'>
                     <b>User</b>
-                    <a id="selected" class="black-color"> Profile Details </a>
-                    <a class="black-color"> Event Plus </a>
+                    <a class="black-color"> Profile Details </a>
+                    <a id="selected" class="black-color"> Event Plus </a>
                     <a class="black-color"> Notifications </a>
                     <b>Adminstarator</b>
                     <a class="black-color"> Join Requests </a>
@@ -63,15 +63,32 @@
         <div class='pro-info main-effect'>
             <form class="flex-container flex-column flex-center">
                     <div class="flex-container">
-                    <div><p> Full Name:</p><input class='input-style' type="text" placeholder="Full name"/></div>
-                    <div class="flex-margin-left"><p> Email:</p><input class='input-style' type="text" placeholder="Email"/></div>
+                    <div><p> Title:</p><input class='input-style' type="text" placeholder="Title"/></div>
+                    <div class="flex-margin-left"><p> Organizer:</p><input class='input-style' type="text" placeholder="Organizer"/></div>
+                    <div class="flex-margin-left"><p> Place:</p><input class='input-style' type="text" placeholder="Place"/></div>
                     </div>
                     <div><p> BirthDate:</p><input class='input-style' type="datetime-local" placeholder="BirthDate"/></div>
-                    <div class="flex-container">
-                    <div><p> Province:</p><input class='input-style' type="text" placeholder="Province"/></div>
-                    <div class="flex-margin-left"><p> City:</p><input class='input-style' type="text" placeholder="City"/></div>
+                    <p> Cover:</p>
+                    <div class="cover-pic-chooser flex-container flex-center flex-column">
+                        <input class='cover-pic-input' type="file" accept="image/*">
+                        <img class='cover-pic-chosen' src="../resources/imgs/event-cover-1.png">
+                        <p class='choose-cover-bt'>Choose</p>
                     </div>
-                    <div><p> Mobile:</p><input class='input-style' type="tel" placeholder="Mobile"/></div>
+                    <p> Logo:</p>
+                    <div class="cover-pic-chooser flex-container flex-center flex-column">
+                        <input class='logo-pic-input' type="file" accept="image/*">
+                        <img class='logo-pic-chosen' src="../resources/imgs/default-logo.jpg">
+                        <p class='choose-logo-bt'>Choose</p>
+                    </div>
+                    <div><p> Lecturer Name:</p><input class='input-style' type="text" placeholder="Lecturer Name"/></div>
+                    <p> Lecturer Photo:</p>
+                    <div class="cover-pic-chooser flex-container flex-center flex-column">
+                        <input class='logo-pic-input' type="file" accept="image/*">
+                        <img class='logo-pic-chosen' src="../resources/imgs/default-logo.jpg">
+                        <p class='choose-logo-bt'>Choose</p>
+                    </div>
+                    <div><p> Resume:</p><input type="file" accept=""></div>
+                    <div><p> Description:</p> <textarea class='input-style' rows="10" cols="70" placeholder="Tell me about your event"></textarea></div>
                     <button class="button-style">Submit</button>
                 </div>
             </form>

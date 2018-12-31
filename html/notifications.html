@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -51,35 +52,52 @@
                 </div>
                 <div class='pro-outline flex-padding-1 flex-container flex-column'>
                     <b>User</b>
-                    <a id="selected" class="black-color"> Profile Details </a>
+                    <a class="black-color"> Profile Details </a>
                     <a class="black-color"> Event Plus </a>
-                    <a class="black-color"> Notifications </a>
+                    <a id="selected" class="black-color"> Notifications </a>
                     <b>Adminstarator</b>
                     <a class="black-color"> Join Requests </a>
                     <a class="black-color"> Lecture Requests </a>
                 </div>
             </div>
         </aside>
-        <div class='pro-info main-effect'>
-            <form class="flex-container flex-column flex-center">
-                    <div class="flex-container">
-                    <div><p> Full Name:</p><input class='input-style' type="text" placeholder="Full name"/></div>
-                    <div class="flex-margin-left"><p> Email:</p><input class='input-style' type="text" placeholder="Email"/></div>
-                    </div>
-                    <div><p> BirthDate:</p><input class='input-style' type="datetime-local" placeholder="BirthDate"/></div>
-                    <div class="flex-container">
-                    <div><p> Province:</p><input class='input-style' type="text" placeholder="Province"/></div>
-                    <div class="flex-margin-left"><p> City:</p><input class='input-style' type="text" placeholder="City"/></div>
-                    </div>
-                    <div><p> Mobile:</p><input class='input-style' type="tel" placeholder="Mobile"/></div>
-                    <button class="button-style">Submit</button>
-                </div>
-            </form>
+        <div class='pro-info flex-container flex-column flex-center'>
+           <table class="request-table main-effect"> 
+                <col>
+                <col>
+                <col>
+                <col>
+                <thead> 
+                <tr> 
+                    <th>Request</th>
+                    <th>Event</th>
+                    <th>Status</th> 
+                </tr> 
+                </thead> 
+                <tbody> 
+                <tr> 
+                    <td>Lecture</td>
+                    <td>Erfan Miahi</td>                    
+                    <td class="refuse-message">Refused</td>
+                </tr>
+                <tr> 
+                    <td>Join</td> 
+                    <td>First School of AI Meetup</td>                    
+                    <td class="refuse-message">Refused</td>
+                </tr>
+                <tr> 
+                    <td>Lecture</td> 
+                    <td>Second School of AI Meetup</td>
+                    <td class="accept-message">Accepted</td>
+                </tr> 
+
+                </tbody> 
+            </table> 
         </div>
     </div>
 
 
-    <footer class="profile-footer">
+    <footer class="profile-footer stick-bottom">
         <a href="#" class="fa fa-new fa-facebook"></a>
         <a href="#" class="fa fa-new fa-twitter"></a>
         <a href="#" class="fa fa-new fa-telegram"><i></a>

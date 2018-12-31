@@ -214,12 +214,32 @@ footer {
 
 
 .profile-footer {
-    bottom: 0px;
-    position: relative;
     width:100%;
     background: white;
     z-index: 4;
 }
 
+.not-found-main {
+    height: 600px;
+}
 
-  
+.font-large {
+    font-size: 8em;
+}
+
+.font-medium {
+    font-size: 4em;
+}
+
+
+.font-small {
+    font-size: 2em;
+}
+
+.accept-message {
+    color: rgb(57, 240, 57);
+}
+
+.refuse-message {
+    color: rgb(238, 16, 16);
+}
