@@ -137,6 +137,18 @@ footer {
     right: 80px;
 }
 
+.event-header .signup-bt {
+    position: absolute;
+    top: 270px;
+    left:30%;
+}
+
+.event-header .lecture-req-bt {
+    position: absolute;
+    top: 270px;
+    right:40%;
+}
+
 
 
 .pro-short-info {
@@ -243,3 +255,102 @@ footer {
 .refuse-message {
     color: rgb(238, 16, 16);
 }
+
+.brand-white {
+    display: None;
+}
+
+@media screen and (max-width: 1000px) {
+    .event-header .signup-bt {
+        top: 130px;
+        left:30%;
+    }
+    
+    .event-header .lecture-req-bt {
+        top: 130px;
+        right:30%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .event-header .signup-bt {
+        top: 130px;
+        left:20%;
+    }
+    
+    .event-header .lecture-req-bt {
+        top: 130px;
+        right:20%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .nav-container {
+        background-color: transparent;
+        box-shadow: 0px -4px 10px 0px rgba(255, 255, 255, 0);
+        height: auto;
+        padding: 10px;
+        position: static;
+
+    }
+
+    .nav-container div * {
+        /* margin: 10px; */
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-container div {
+        /* margin: 10px; */
+        margin: 0px;
+        padding: 0;
+    }
+
+
+    .event-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+    }
+
+    .event-header .profile-pic {
+        position: static;
+        margin-bottom: 10px;
+        /* top: 250px;
+        left: 80px; */
+    }
+
+    .event-header .event-short-desc-container {
+        position: static;
+        /* top: 205px;
+        right: 80px; */
+    }
+
+    .event-cover {
+        margin-bottom: 20px;
+    }
+
+    .event-header .signup-bt {
+        top: 130px;
+        left:15%;
+        padding: 10px;
+    }
+    
+    .event-header .lecture-req-bt {
+        top: 130px;
+        right:15%;
+        padding: 10px;
+    }
+
+    .profile-aside {
+        margin-top:10px;
+        margin: auto;
+    }
+
+  }

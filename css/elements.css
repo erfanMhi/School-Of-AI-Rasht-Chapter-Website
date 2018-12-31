@@ -314,3 +314,39 @@
   color: white;
   border-radius: 10px;
 }
+
+
+
+@media screen and (max-width: 600px) {
+  .cover-pic-chooser {
+    /* width: 400px; */
+    /* height: 250px; */
+    /* margin: auto; */
+    position: relative;
+  }
+
+  .cover-pic-input {
+    position: absolute;
+    opacity: 0;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+  }
+
+  .cover-pic-input:hover {
+    cursor: pointer;
+  }
+
+  .cover-pic-chosen {
+    height: 100px;
+    width: 200px;
+    opacity: 1;
+  }
+  .choose-cover-bt {
+    bottom: 0px;  
+  }
+
+  .request-table {
+    font-size: 0.75em;
+  }
+}
