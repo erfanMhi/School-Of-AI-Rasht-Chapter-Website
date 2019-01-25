@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 
 <html lang="en">
@@ -10,9 +12,9 @@
   <meta name="author" content="Erfan Miahi">
   <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;">
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/flex-containers.css">
-  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'events/css/styles.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'events/css/flex-containers.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'events/css/elements.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -23,7 +25,7 @@
 
       <div class="flex-item-1">
         <a id="brand-pic-container" href="">
-          <img class="brand-item" src="./resources/imgs/soa_logo.svg" onmouseover="hover(this);" onmouseout="unhover(this);">
+          <img class="brand-item" src="{% static 'events/resources/imgs/soa_logo.svg' %}" onmouseover="hover(this);" onmouseout="unhover(this);">
         </a>
       </div>
 
@@ -60,7 +62,7 @@
     <h2>Events</h2>
     <div class="events-container flex-container flex-padding-1">
       <div class="main-effect event-card flex-item-1">
-        <img src="./resources/imgs/ai.png">
+        <img src="{% static 'events/resources/imgs/ai.png' %}">
         <div class="flex-container flex-column flex-grow">
           <b>School of AI First Meetup</b>
           <button class="event-card-button">Sign up</button>
@@ -123,7 +125,7 @@
       </div>
       <div class="main-effect event-card flex-padding-1">
         <div class="flex-container flex-center">
-        <img src="./resources/imgs/profile.png" class='deans-photo'>
+        <img src="{% static 'events/resources/imgs/profile.png' %}" class='deans-photo'>
         </div>
         <div class="flex-container flex-column flex-center">
           <b>Erfan Miahi</b>
@@ -168,8 +170,8 @@
     <div>
   </div>
 
-  <script src="./js/utils/css_manip.js"></script>
-  <script src="./js/scripts.js"></script>
+  <script src="{% static 'events/js/utils/css_manip.js' %}"></script>
+  <script src="{% static 'events/js/scripts.js' %}"></script>
 
 
   <!--  <div class="flex-container">
