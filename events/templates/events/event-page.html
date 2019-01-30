@@ -1,0 +1,68 @@
+{% extends 'main_page/base.html' %}
+
+{% load static %}
+
+
+        {% block content %}
+
+
+
+
+
+    <div class='event-header'>
+      <div class='event-cover'>
+          <img src="{{ event.cover_url.url }}" width="100%" height="100%">
+      </div>
+      <div class='profile-pic'> <img width="100px" src="{{ event.logo_url.url }}"> </div>
+      <div class='event-short-desc-container main-effect'> 
+        <h3> {{ event.title }} </h3>
+        <p><b>Organizer:</b> {{ event.organizer }}</p>
+        <p><b>Place:</b> {{ event.place }} </p>
+        <p><b>Start Date:</b> {{ event.start_date }} </p>
+        <p><b>Finish Date:</b> {{ event.finish_date }} </p>
+      </div>
+      <a onclick="sign_up_event('{{user}}', '{{event.id}}')" class="event-card-button signup-bt">Sign Up</a>
+      <a href="{{ lecturers.0.resume_url.url }}" class="event-card-button lecture-req-bt">Resume Download</a>
+    </div>
+  
+  <main class="main-effect flex-container flex-column">
+
+  <section class="flex-container flex-column">
+    <h2>Description</h2>
+    <div class="events-container flex-container flex-padding-1">
+      {{ event.description }}
+    </div>
+    <div class='flex-container flex-center'>
+    </div>
+  </section>
+
+  {% if lecturers %}
+
+<section class="flex-container flex-column">
+    <h2>Lecturer</h2>
+    <div class="events-container flex-container flex-padding-1 flex-wrap">
+     {% for lecturer in lecturers %}
+      {% comment %} <div class="flex-item-1">
+
+      </div> {% endcomment %}
+      <div class="main-effect event-card flex-item-1">
+        <img src="{{ lecturer.photo_url.url }}">
+        <div class="flex-container flex-column flex-grow flex-center">
+          <b>{{ lecturer.name }}</b>
+        </div>
+      </div>
+      {% comment %} <div class="flex-item-1">
+
+      </div> {% endcomment %}
+      {% endfor %}
+    </div>
+    <div class='flex-container flex-center'>
+    </div>
+  </section>
+    {% else %}
+    {% endif %}
+
+  </main>
+
+          {% endblock %}
+

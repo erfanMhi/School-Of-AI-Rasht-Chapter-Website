@@ -1,0 +1,371 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+  .pagination {
+    text-align: center;
+  }
+  
+  .sign-button {
+      background: #1AAB8A;
+      color: #fff;
+      border: none;
+      position: relative;
+      height: 60px;
+      font-size: 1.6em;
+      padding: 0 2em;
+      cursor: pointer;
+      transition: 800ms ease all;
+      outline: none;
+  }
+
+  .sign-button:hover {
+      background: #fff;
+      color: #1AAB8A;
+  }
+
+  .sign-button:before,
+  .sign-button:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: 0;
+      background: #1AAB8A;
+      transition: 400ms ease all;
+  }
+
+  .sign-button:after {
+      right: inherit;
+      top: inherit;
+      left: 0;
+      bottom: 0;
+  }
+
+  .sign-button:hover:before,
+  .sign-button:hover:after {
+      width: 100%;
+      transition: 800ms ease all;
+  }
+
+  /* .events-cantainer {} */
+
+  .event-card img {
+      width: 100%;
+  }
+
+  .event-card div {
+      padding: 5px;
+  }
+
+
+  .event-card {
+      margin-right: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .event-card-button {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background: #1AAB8A;
+  }
+
+  .event-card-button:hover {
+    color: #1AAB8A;
+    background: white;
+  }
+
+  .show-more-button {
+    background: #1AAB8A;
+    width: max-content;
+    padding: 10px;
+    box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.16);
+  }
+
+  .show-more-button:hover {
+    color: #1AAB8A;
+    background: white;
+    cursor: pointer;
+  }
+  /* Style all font awesome icons */
+.fa-new {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa-new:hover {
+    opacity: 0.7;
+    
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    color: #3B5998;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    color: #55ACEE;
+  }
+
+  /* .fa-facebook {
+      
+  } */
+
+  .fa {
+    color: #55ACEE;
+    border-radius: 50%;
+  }
+  .deans-photo {
+    height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+  }
+
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  .input-style {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+
+  .form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #1AAB8A;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+
+  .form-link {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #1AAB8A;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+
+  .button-style {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #1AAB8A;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+
+  .button-style:hover, .button-style:active, .button-style:focus {
+    background: #1AAB8A;
+  }
+
+  .form button:hover,.form button:active,.form button:focus {
+    background: #1AAB8A;
+  }
+
+
+  .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+  }
+
+  .form .message a {
+    color: #1AAB8A;
+    text-decoration: none;
+  }
+
+  #login-register-close-bt:hover {
+    cursor: pointer;
+    color: #1AAB8A;
+  }
+
+  #login-register-close-bt {
+    color: white;
+  }
+
+  .custom-file-input {
+    position: absolute;
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .custom-file-input:hover {
+    cursor: pointer;
+  }
+
+
+
+.request-table{
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+    background: white;
+}
+.request-table th, td {
+    padding: 0.5rem;
+    text-align: left;
+    /* border: 1px solid #ccc; */
+  }
+.request-table tbody tr:hover {
+    /* background: #1AAB8A;
+    color: white; */
+  -webkit-box-shadow: -1px 7px 19px 0px rgba(171,169,171,1);
+  -moz-box-shadow: -1px 7px 19px 0px rgba(171,169,171,1);
+  box-shadow: -1px 7px 19px 0px rgba(171,169,171,1);
+}
+
+.fa-trash, .fa-handshake-o, .fa-user-plus:hover {
+  cursor: pointer;
+}
+
+.cover-pic-chooser {
+  /* width: 400px; */
+  /* height: 250px; */
+  /* margin: auto; */
+  position: relative;
+}
+
+.cover-pic-input {
+  position: absolute;
+  opacity: 0;
+  width: 450px;
+  height: 250px;
+  z-index: 10;
+}
+
+.cover-pic-input:hover {
+  cursor: pointer;
+}
+
+.cover-pic-chosen {
+  height: 250px;
+  width: 450px;
+  opacity: 1;
+}
+
+.choose-cover-bt {
+  position: absolute;
+  bottom: 80px;
+  padding: 10px;
+  font-size: 1.5em;
+  background: #1AAB8A;
+  color: white;
+  border-radius: 10px;
+}
+
+
+.logo-pic-input {
+  position: absolute;
+  opacity: 0;
+  height: 150px;
+  width: 150px;
+  z-index: 10;
+}
+
+.logo-pic-input:hover {
+  cursor: pointer;
+}
+
+.logo-pic-chosen {
+  height: 150px;
+  width: 150px;
+  opacity: 1;
+}
+
+.choose-logo-bt {
+  position: absolute;
+  bottom: 10px;
+  padding: 5px;
+  font-size: 1em;
+  background: #1AAB8A;
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .cover-pic-chooser {
+    /* width: 400px; */
+    /* height: 250px; */
+    /* margin: auto; */
+    position: relative;
+  }
+
+  .cover-pic-input {
+    position: absolute;
+    opacity: 0;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+  }
+
+  .cover-pic-input:hover {
+    cursor: pointer;
+  }
+
+  .cover-pic-chosen {
+    height: 100px;
+    width: 200px;
+    opacity: 1;
+  }
+  .choose-cover-bt {
+    bottom: 0px;  
+  }
+
+  .request-table {
+    font-size: 0.75em;
+  }
+}

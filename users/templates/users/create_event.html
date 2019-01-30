@@ -1,0 +1,52 @@
+{% extends 'users/profile_base.html' %}
+
+{% load static %}
+
+
+    {% block content %}
+
+        <div class='pro-info main-effect'>
+            <form enctype="multipart/form-data" method="POST" action="{% url 'create_event' %}" class="flex-container flex-column flex-center">
+                  {% csrf_token %}
+                    {% if succeed %}
+                    <p> Event Successfully added.</p>
+                    {% endif %}
+                    {% if not_valid %}
+                    <p> Inputs are not valid.</p>
+                    {% endif %}
+                    <div class="flex-container">
+                    <div><p> Title:</p><input class='input-style' name="title" type="text" placeholder="Title"/></div>
+                    <div class="flex-margin-left"><p> Organizer:</p><input class='input-style' type="text" name="organizer" placeholder="Organizer"/></div>
+                    <div class="flex-margin-left"><p> Place:</p><input class='input-style' type="text" name="place" placeholder="Place"/></div>
+                    </div>
+                    <div><p> Start Date:</p><input name="start_date" class='input-style' type="datetime-local"/>
+                    <p> Finish Date:</p><input name="finish_date" class='input-style' type="datetime-local"/></div>
+                    <p> Cover:</p>
+                    <div class="cover-pic-chooser flex-container flex-center flex-column">
+                        <input name="cover_url" class='cover-pic-input' type="file" accept="image/*">
+                        <img class='cover-pic-chosen' src="{% static 'main_page/resources/imgs/event-cover-1.png' %}">
+                        <p class='choose-cover-bt'>Choose</p>
+                    </div>
+                    <p> Logo:</p>
+                    <div class="cover-pic-chooser flex-container flex-center flex-column">
+                        <input name="logo_url" class='logo-pic-input' type="file" accept="image/*">
+                        <img class='logo-pic-chosen' src="{% static 'main_page/resources/imgs/default-logo.jpg' %}">
+                        <p class='choose-logo-bt'>Choose</p>
+                    </div>
+                    <div><p> Lecture title:</p><input name="lecture_title" class='input-style' type="text" placeholder="Lecturer Title"/></div>
+                    <div><p> Lecturer Name:</p><input name="name" class='input-style' type="text" placeholder="Lecturer Name"/></div>
+                    <p> Lecturer Photo:</p>
+                    <div class="cover-pic-chooser flex-container flex-center flex-column">
+                        <input name="lecturer_photo" class='logo-pic-input' type="file" accept="image/*">
+                        <img class='logo-pic-chosen' src="{% static 'main_page/resources/imgs/default-logo.jpg' %}">
+                        <p class='choose-logo-bt'>Choose</p>
+                    </div>
+                    <div><p> Resume:</p><input name="resume_url" type="file" accept=""></div>
+                    <div><p> Categories:</p><input name="categories" class='input-style' type="text" placeholder="Categories"/></div>
+                    <div><p> Description:</p> <textarea name="description" class='input-style' rows="10" cols="70" placeholder="Tell me about your event"></textarea></div>
+                    <button class="button-style">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

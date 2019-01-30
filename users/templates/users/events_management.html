@@ -1,0 +1,46 @@
+{% extends 'users/profile_base.html' %}
+
+{% load static %}
+
+
+        {% block content %}
+        <div class='pro-info flex-container flex-column flex-center'>
+           <table class="request-table main-effect"> 
+                <col>
+                <col>
+                <col>
+                <col>
+                <thead> 
+                <tr> 
+                    <th>Id</th> 
+                    <th>Title</th> 
+                    <th>Action</th> 
+                </tr> 
+                </thead> 
+                <tbody> 
+                {% for event in events %}
+                    <tr id="{{ 'event' }}{{ event.id }}"> 
+                        <td>{{ event.id }}</td> 
+                        <td>{{ event.title }}</td>
+                        <td><a class="fa fa-trash" onclick="remove_event('{{ event.id }}', 'remove')"></a>
+                        <span class="flex-margin-left">|</span>
+                        <a href="{% url 'event_update' event.id %}" class="fa flex-margin-left fa-user-plus"></a>
+                        </td> 
+                    </tr> 
+                {% endfor %}
+                </tbody> 
+            </table> 
+        </div>
+    </div>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+

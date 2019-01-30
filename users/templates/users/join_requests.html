@@ -1,0 +1,47 @@
+{% extends 'users/profile_base.html' %}
+
+{% load static %}
+
+
+        {% block content %}
+        <div class='pro-info flex-container flex-column flex-center'>
+           <table class="request-table main-effect"> 
+                <col>
+                <col>
+                <col>
+                <col>
+                <thead> 
+                <tr> 
+                    <th>User</th> 
+                    <th>Event</th> 
+                    <th>Action</th> 
+                </tr> 
+                </thead> 
+                <tbody> 
+                {% for event_req in user_requests %}
+                    <tr id="{{ 'request' }}{{ event_req.id }}"> 
+                        {{'request'|add:event_req.id }}
+                        <td>{{ event_req.user.user.username }}</td> 
+                        <td>{{ event_req.event.title }}</td>
+                        <td><a class="fa fa-trash" onclick="send_dicision('{{ event_req.id }}', 'd')"></a>
+                        <span class="flex-margin-left">|</span>
+                        <a onclick="send_dicision('{{ event_req.id }}', 'a')" class="fa flex-margin-left fa-user-plus"></a>
+                        </td> 
+                    </tr> 
+                {% endfor %}
+                </tbody> 
+            </table> 
+        </div>
+    </div>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+

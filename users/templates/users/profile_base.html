@@ -1,0 +1,124 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Erfan Miahi</title>
+  <meta name="description" content="School of AI - Rasht Chapter">
+  <meta name="author" content="Erfan Miahi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="stylesheet" type="text/css" href="{% static 'main_page/css/styles.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'main_page/css/flex-containers.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'main_page/css/elements.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+
+  function hover(element, others=false) {
+    if (others) 
+        element.setAttribute('src', "{% static 'main_page/resources/imgs/soa_logo_2.svg' %}");
+    else
+        element.setAttribute('src', "{% static 'main_page/resources/imgs/soa_logo_2.svg' %}");
+  }
+
+  function unhover(element, others=false) {
+      if (others)
+          element.setAttribute('src', "{% static 'main_page/resources/imgs/soa_logo_3.svg' %}");
+      else
+          element.setAttribute('src', "{% static 'main_page/resources/imgs/soa_logo.svg' %}");
+
+  }
+  </script>
+
+
+</head>
+<body>
+  <!--<div class="flex-container">-->
+    <nav class="nav-container nav-shadow flex-container flex-center-align flex-space">
+
+
+        <div class="">
+            <a id="brand-pic-container-other" href="{% url 'index' %}">
+            <img class="brand-item black-color" src="{% static 'main_page/resources/imgs/soa_logo_3.svg' %}" onmouseover="hover(this, true);" onmouseout="unhover(this, true);">
+            </a>
+        </div>
+
+        <div class="flex-container flex-center-align flex-margin-right-high">
+            <a  class="flex-item-1 black-color" href="#">
+                {{ user.first_name|add:' '|add:user.last_name }}
+            </a>
+            <a  class="flex-item-1 black-color" href="#">
+                {% if user.profile.photo_url %}
+                    <img id="nav_pro_pic" class='brand-item' src="{{ user.profile.photo_url.url }}">
+                {% else %}
+                    <img id="nav_pro_pic" class='br and-item' src="{% static 'main_page/resources/imgs/user.svg' %}">
+                {% endif %}
+            </a>
+        </div>
+
+    </nav>
+
+
+    <div class="main-effect flex-container profile-main">
+        <aside class='profile-aside'>
+            <div class='main-effect flex-container flex-column flex-wrap'>
+                <div class='pro-short-info flex-padding-1 flex-container flex-center flex-column'>
+                    <div class="profile-pic-container">
+                        <input id="pro_pic" onchange="upload_profile_pic()" class='custom-file-input' type="file" accept="image/*">
+                        {% if user.profile.photo_url %}
+                            <img id="main_pro_pic" class='profile-pic' src="{{ user.profile.photo_url.url }}">
+                        {% else %}
+                            <img id="main_pro_pic" class='profile-pic' src="{% static 'main_page/resources/imgs/user.svg' %}">
+                        {% endif %}
+                    </div>
+                    <p> {{ user.username }} </p>
+                </div>
+                <div class='pro-outline flex-padding-1 flex-container flex-column'>
+                    <b>User</b>
+                    <a class="black-color"> Profile Details </a>
+                    <a href="{% url 'notifications' %}" class="black-color"> Notifications </a>
+                    {% if user.is_staff %}
+                        <b>Adminstarator</b>
+                        <a href="{% url 'create_event' %}" class="black-color"> Event Plus </a>
+                        <a href="{% url 'join_requests' %}" class="black-color"> Join Requests </a>
+                        <a href="{% url 'event_management' %}" class="black-color"> Events Management </a>
+                        <a href="{% url 'lecture_request' %}" class="black-color"> Lecture Requests </a>
+                    {% else %}
+                    {% endif %}
+                </div>
+            </div>
+        </aside>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+    <footer class="profile-footer">
+        <a href="#" class="fa fa-new fa-facebook"></a>
+        <a href="#" class="fa fa-new fa-twitter"></a>
+        <a href="#" class="fa fa-new fa-telegram"><i></a>
+
+
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="{% static 'main_page/js/users.js' %}"></script>
+  <script src="{% static 'main_page/js/event_sign_up.js' %}"></script>
+  {% comment %} <script src="{% static 'main_page/js/utils/css_manip.js' %}"></script> {% endcomment %}
+  {% comment %} <script src="{% static 'main_page/js/scripts.js' %}"></script> {% endcomment %}
+  <!--  <div class="flex-container">
+      <div><a href="https://www.dropbox.com/s/vzplvx8otjtm6mp/resume.pdf?dl=0">Resume</a></div>
+      <div><a href="https://github.com/erfanMhi">Github</a></div>
+      <div><a href="https://twitter.com/NTDeterminestic">Twitter</a></div>
+      <div><a href="https://www.linkedin.com/in/erfan-miahi-8637a1130/">Linkedin</a></div>
+    </div>
+  </button>-->
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{% extends 'users/profile_base.html' %}
+
+{% load static %}
+
+
+        {% block content %}
+        <div class='pro-info flex-container flex-column flex-center'>
+           <table class="request-table main-effect"> 
+                <col>
+                <col>
+                <col>
+                <col>
+                <thead> 
+                <tr> 
+                    <th>Request</th>
+                    <th>Event</th>
+                    <th>Status</th> 
+                </tr> 
+                </thead> 
+                <tbody> 
+                {% for event_req in user_requests %}
+                <tr> 
+                    <td>Joining Event</td>
+                    <td>{{ event_req.event.title }}</td>    
+                    {% if event_req.reg_status == 'r' %}                
+                    <td class="waiting-message">Not Responded Yet</td>
+                    {% endif %}
+                    {% if event_req.reg_status == 'a' %}                
+                    <td class="accept-message"> "Accepted" </td>
+                    {% endif %}
+                    {% if event_req.reg_status == 'd' %}                
+                    <td class="refuse-message"> "Rejected" </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+                </tbody> 
+            </table> 
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'users/profile_base.html' %}
+
+{% load static %}
+
+
+        {% block content %}
+
+        <div class='pro-info main-effect'>
+            <form id="profile_update_form" class="flex-container flex-column flex-center" method="POST" >
+
+                    <div class="flex-container">
+                    <div><p> Full Name:</p><input id="full_name" class='input-style' value="{{ user.first_name|add:' '|add:user.last_name }}" type="text" placeholder="Full name"/></div>
+                    <div class="flex-margin-left"><p> Email:</p><input id="email" class='input-style' value="{{ user.email }}" type="text" placeholder="Email"/></div>
+                    </div>
+                    <div><p> BirthDate:</p><input id="birthdate" class='input-style' value="{{ user.profile.birthdate|date:'Y-m-d'}}" type="date" placeholder="BirthDate"/></div>
+                    <div class="flex-container">
+                    <div><p> Province:</p><input id="province" class='input-style' value="{{ user.profile.province }}" type="text" placeholder="Province"/></div>
+                    <div class="flex-margin-left"><p> City:</p><input id="city" class='input-style' value="{{ user.profile.city }}" type="text" placeholder="City"/></div>
+                    </div>
+                    <div><p> Mobile:</p><input id="mobile" class='input-style' type="tel" placeholder="Mobile" value="{{ user.profile.mobile }}"/></div>
+                    <button name="data" type="button" class="button-style" onclick="profile_update()">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        {% endblock %}
+

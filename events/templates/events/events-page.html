@@ -1,0 +1,43 @@
+{% extends 'main_page/base.html' %}
+
+{% load static %}
+
+
+        {% block content %}
+
+  <main class="main-effect flex-container flex-column flex-margin-top-high">
+
+  <section class="flex-container flex-column">
+    <div class="events-container flex-container flex-padding-1">
+      {% for event in events %}
+      <div class="main-effect event-card flex-item-1">
+        <img src="{{ event.cover_url.url }}">
+        <div class="flex-container flex-column flex-grow">
+          <b>{{ event.title }}</b>
+           <a class="event-card-button" href="{% url 'event_details' event.id %}">Sign up</a>
+        </div>
+      </div> 
+      {% endfor %}
+  </section>
+
+    <div class="pagination">
+        <span class="step-links flex-center">
+            {% if events.has_previous %}
+                <a class="black-color" href="{% url 'events' %}">&laquo; first</a>
+                <a class="black-color" href="{% url 'events_page' events.previous_page_number %}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ events.number }} of {{ events.paginator.num_pages }}.
+            </span>
+
+            {% if events.has_next %}
+                <a class="black-color" href="{% url 'events_page' events.next_page_number %}">next</a>
+                <a class="black-color" href="{% url 'events_page' events.paginator.num_pages %}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+
+  </main>
+
+  {% endblock %}
