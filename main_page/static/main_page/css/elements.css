@@ -17,6 +17,11 @@
       outline: none;
   }
 
+  .card_normal_size {
+    width: 300px;
+    height: 400px;
+  }
+
   .sign-button:hover {
       background: #fff;
       color: #1AAB8A;

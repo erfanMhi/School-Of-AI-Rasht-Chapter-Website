@@ -72,7 +72,8 @@ def login_user(request):
         return render(request, 'main_page/index.html', {})
 @login_required
 def logout_user(request):
-    pass
+    logout(request)
+    return HttpResponseRedirect(reverse('index'))
 
 
 @login_required
@@ -170,11 +171,11 @@ def create_event(request):
 @login_required
 def notifications(request):
     user = request.user
-    if user.is_staff:
-        user_requests = UserRegistration.objects.filter(user=request.user.profile)
-        return render(request, 'users/notifications.html', {'user': request.user, 'user_requests': user_requests})
-    else:
-        raise PermissionDenied
+    # if user.is_staff:
+    user_requests = UserRegistration.objects.filter(user=request.user.profile)
+    return render(request, 'users/notifications.html', {'user': request.user, 'user_requests': user_requests})
+    # else:
+    #     raise PermissionDenied
 
 @login_required
 def join_requests(request):

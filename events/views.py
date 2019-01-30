@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 
-from .models import Event, Lecture, Lecturer
+from .models import Event, Lecture, Lecturer, Category
 
 
 
@@ -17,8 +17,15 @@ def event_details(request, event_id):
         pass
     return render(request, 'events/event-page.html', {'event': event, 'lecturers': lecturers, 'user': request.user})
 
-def events_page(request, page=1):
-    events_list = Event.objects.all()
+def events_page(request, page=1, category_id=None):
+    if category_id is not None:
+        events_list = []
+        category = get_object_or_404(Category, pk=category_id)
+        for event in Event.objects.all():
+            if category in Event.categories.all():
+                events_list.append(event)
+    else:
+        events_list = Event.objects.all()
     paginator = Paginator(events_list, 2)
     events = paginator.get_page(page)
 

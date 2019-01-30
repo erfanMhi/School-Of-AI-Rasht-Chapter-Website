@@ -15,9 +15,21 @@ def index(request):
     return render(request, 'main_page/index.html', context)
 
 def not_found_view(request):
-    return render(request, 'main_page/html/404.html')
+    context = {
+        'user': request.user,
+    }
+    return render(request, 'main_page/html/404.html', context)
     
 
 
 def permission_denied_view(request):
-    return render(request, 'main_page/html/403.html')
+    context = {
+        'user': request.user,
+    }
+    return render(request, 'main_page/html/403.html', context)
+
+def server_error(request):
+    context = {
+        'user': request.user,
+    }
+    return render(request, 'main_page/html/500.html', context)

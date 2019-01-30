@@ -118,7 +118,7 @@
     <h2>Lecturers</h2>
     <div class="events-container flex-container flex-padding-1">
       {% for lecturer in latest_lecturer_list %}
-      <div class="main-effect event-card flex-item-1">
+      <div class="main-effect card_normal_size event-card flex-item-1">
         <img src="{% static lecturer.photo_url.url %}">
         <div class="flex-container flex-column flex-grow">
           <b>{{ lecturer.name }}</b>
@@ -190,6 +190,7 @@
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <script src="{% static 'main_page/js/utils/css_manip.js' %}"></script>
   <script src="{% static 'main_page/js/scripts.js' %}"></script>
+  <script src="{% static 'main_page/js/users.js' %}"></script>
   
 
   <!--  <div class="flex-container">

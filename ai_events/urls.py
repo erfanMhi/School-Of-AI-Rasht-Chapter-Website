@@ -22,6 +22,7 @@ from django.urls import include, path
 from django.conf.urls import url
 handler404 = 'main_page.views.not_found_view'
 handler403 = 'main_page.views.permission_denied_view'
+handler500 = 'main_page.views.server_error'
 
 urlpatterns = [
     path('', include('main_page.urls')),

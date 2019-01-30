@@ -1,0 +1,25 @@
+{% extends 'users/profile_base.html' %}
+
+{% load static %}
+
+
+    {% block content %}
+
+        <div class='pro-info main-effect'>
+            <form method="POST" action="{% url 'comment' event.id %}" class="flex-container flex-column flex-center">
+                  {% csrf_token %}
+                    {% if succeed %}
+                    <p> Comment Successfully Sended.</p>
+                    {% endif %}
+                    {% if not_valid %}
+                    <p> Inputs are not valid.</p>
+                    {% endif %}
+                    <div class="flex-container">
+                    <div><p> Title:</p><input class='input-style' name="title" type="text" placeholder="Title" value="{{ comment.title }}"/></div>
+                    <div><p> Description:</p> <textarea value="{{ comment.message }}" name="description" class='input-style' rows="10" cols="70" placeholder="Tell me about your event">{{ event.description }}</textarea></div>
+                    <button class="button-style">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

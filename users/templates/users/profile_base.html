@@ -47,7 +47,9 @@
             <img class="brand-item black-color" src="{% static 'main_page/resources/imgs/soa_logo_3.svg' %}" onmouseover="hover(this, true);" onmouseout="unhover(this, true);">
             </a>
         </div>
-
+        <div class="">
+                    <a class="black-color"href="{% url 'logout' %}">Logout</a>
+        </div>
         <div class="flex-container flex-center-align flex-margin-right-high">
             <a  class="flex-item-1 black-color" href="#">
                 {{ user.first_name|add:' '|add:user.last_name }}
